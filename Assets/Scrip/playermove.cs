@@ -30,8 +30,13 @@ public class PlayerMove : MonoBehaviour
     void FixedUpdate()
     {
 
-        Vector3 forwardMove = transform.forward * moveSpeed;
-        rb.MovePosition(rb.position + forwardMove * Time.fixedDeltaTime);
+    Vector3 forwardMove = transform.forward * moveSpeed;
+
+    Vector3 newPosition = rb.position + forwardMove * Time.fixedDeltaTime;
+
+    newPosition.y = rb.position.y;
+
+    rb.MovePosition(newPosition);
     }
 
 
