@@ -9,6 +9,9 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody rb;
     private bool isGrounded;
 
+    public float damageCooldown = 1f;
+    private float lastDamageTime;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -16,7 +19,6 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
-
         float h = Input.GetAxis("Horizontal");
         transform.Rotate(0, h * turnSpeed * Time.deltaTime, 0);
 
@@ -29,19 +31,27 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
-
-    Vector3 forwardMove = transform.forward * moveSpeed;
-
-    Vector3 newPosition = rb.position + forwardMove * Time.fixedDeltaTime;
-
-    newPosition.y = rb.position.y;
-
-    rb.MovePosition(newPosition);
+        Vector3 forwardMove = transform.forward * moveSpeed;
+        rb.MovePosition(rb.position + forwardMove * Time.fixedDeltaTime);
     }
-
 
     void OnCollisionStay(Collision collision)
     {
-        isGrounded = true;
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            if (Time.time > lastDamageTime + damageCooldown)
+            {
+                GetComponent<PlayerHealth>().TakeDamage(10);
+                lastDamageTime = Time.time;
+            }
+        }
     }
 }
