@@ -1548,6 +1548,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 4581718618250850181, guid: 8146374d820c3ac45baeed5014144363, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4581718618250850182, guid: 8146374d820c3ac45baeed5014144363, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9192
@@ -6223,9 +6227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f21a8beb6924f54e8717ce5f881e4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  moveSpeed: 13
+  moveSpeed: 30
   turnSpeed: 120
-  jumpForce: 4
+  jumpForce: 3
   damageCooldown: 1
 --- !u!1001 &1657937201
 PrefabInstance:
