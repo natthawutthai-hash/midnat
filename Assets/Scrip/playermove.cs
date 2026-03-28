@@ -19,9 +19,11 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        // หมุนซ้ายขวา (A / D)
         float h = Input.GetAxis("Horizontal");
         transform.Rotate(0, h * turnSpeed * Time.deltaTime, 0);
 
+        // กระโดด
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
             rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
@@ -31,12 +33,14 @@ public class PlayerMove : MonoBehaviour
 
     void FixedUpdate()
     {
+        // เดินไปข้างหน้าอัตโนมัติ
         Vector3 forwardMove = transform.forward * moveSpeed;
         rb.MovePosition(rb.position + forwardMove * Time.fixedDeltaTime);
     }
 
     void OnCollisionStay(Collision collision)
     {
+        // เช็คว่าเหยียบพื้นเท่านั้น
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
@@ -45,6 +49,7 @@ public class PlayerMove : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        // ชนแล้วเลือดลด
         if (collision.gameObject.CompareTag("Enemy"))
         {
             if (Time.time > lastDamageTime + damageCooldown)

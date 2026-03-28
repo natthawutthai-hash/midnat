@@ -1548,6 +1548,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 4581718618250850181, guid: 8146374d820c3ac45baeed5014144363, type: 3}
+      propertyPath: m_ImplicitCom
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4581718618250850182, guid: 8146374d820c3ac45baeed5014144363, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.9192
@@ -1650,15 +1654,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 7d6b9877311d9b54d9b2807970618528, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.92
+      value: -15.110001
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 7d6b9877311d9b54d9b2807970618528, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -126.9
+      value: -126.900024
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 7d6b9877311d9b54d9b2807970618528, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.05
+      value: 0.43998718
       objectReference: {fileID: 0}
     - target: {fileID: 400014, guid: 7d6b9877311d9b54d9b2807970618528, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4533,7 +4537,7 @@ Canvas:
   m_GameObject: {fileID: 1242434927}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 963194227}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -6223,15 +6227,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f21a8beb6924f54e8717ce5f881e4d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-<<<<<<< HEAD
-  moveSpeed: 14
+  moveSpeed: 30
   turnSpeed: 120
-  jumpForce: 5
-=======
-  moveSpeed: 13
-  turnSpeed: 120
-  jumpForce: 4
->>>>>>> c7ec6d35ce258c70e50bfa5bd67b1558a5a6b228
+  jumpForce: 3
   damageCooldown: 1
 --- !u!1001 &1657937201
 PrefabInstance:
@@ -7092,15 +7090,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bridge_Damage
       objectReference: {fileID: 0}
-<<<<<<< HEAD
-    - target: {fileID: 400036, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 16.18
-      objectReference: {fileID: 0}
-    - target: {fileID: 400036, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.3
-=======
     - target: {fileID: 100040, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
       propertyPath: m_TagString
       value: Ground
@@ -7208,7 +7197,6 @@ PrefabInstance:
     - target: {fileID: 400016, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.44
->>>>>>> c7ec6d35ce258c70e50bfa5bd67b1558a5a6b228
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7216,11 +7204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -59.8
+      value: -59.76462
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1785469
       objectReference: {fileID: 0}
     - target: {fileID: 400040, guid: 618fb2c9500dc8246ad3b5a0cf5e070b, type: 3}
       propertyPath: m_LocalRotation.w
